@@ -43,8 +43,7 @@
   }
 
   &__title {
-    font-size: 12px;
-    line-height: 18px;
+    @include fontSize;
     font-weight: 500;
     margin-bottom: -1;
   }
@@ -98,8 +97,7 @@
 
   &__span {
     color: $span-color;
-    font-size: 12px;
-    line-height: 18px;
+    @include fontSize;
   }
 
   &__value {

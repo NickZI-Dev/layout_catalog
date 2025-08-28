@@ -1,3 +1,14 @@
+/* #region colors */
 $span-color: #616070;
 $blue-color: #00acdc;
 $text-color: #060b35;
+
+/* #endregion */
+
+/* #region mixins */
+@mixin fontSize {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* #endregion */
