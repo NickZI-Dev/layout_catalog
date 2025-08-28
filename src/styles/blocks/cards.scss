@@ -3,8 +3,8 @@
   display: grid;
   grid-template-columns: repeat(1fr);
   justify-content: center;
-  gap: 46px 48px;
-  padding: 50px 40px;
+  gap: $gap-y $gap-x;
+  padding: $cpad-y $cpad-x;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 1fr);
@@ -26,10 +26,10 @@
 /* #endregion */
 
 /* #region cards */
-.cards {
+.card {
   box-sizing: border-box;
-  width: 200px;
-  border: 1px solid #e7e7e7;
+  width: $card-width;
+  border: 1px solid $card-border;
   border-radius: 5px;
   padding: 32px 16px 16px;
   transition: all 300ms;
@@ -43,7 +43,8 @@
   }
 
   &__title {
-    @include fontSize;
+    @include font-size;
+
     font-weight: 500;
     margin-bottom: -1;
   }
@@ -57,8 +58,8 @@
   &:hover {
     transform: scale(1.2);
 
-    .cards__title {
-      color: #34568b;
+    .card__title {
+      color: $card-title-hover;
     }
   }
 
@@ -66,7 +67,7 @@
     display: block;
 
     text-decoration: none;
-    color: #fff;
+    color: $white-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -80,7 +81,7 @@
     transition: background-color 300ms;
 
     &:hover {
-      background-color: #fff;
+      background-color: $white-color;
       color: $blue-color;
     }
   }
@@ -96,8 +97,9 @@
   padding: 24px 0 16px;
 
   &__span {
+    @include font-size;
+
     color: $span-color;
-    @include fontSize;
   }
 
   &__value {
